@@ -1,6 +1,16 @@
-import "@/styles/globals.css";
+import { Fragment } from "react";
 import type { AppProps } from "next/app";
+import Header from "../components/Header";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import "../styles/globals.scss";
+
+function MyApp({ Component, pageProps }: AppProps) {
+    return (
+        <Fragment>
+            <Header />
+            <Component {...pageProps} />
+        </Fragment>
+    );
 }
+
+export default MyApp;
